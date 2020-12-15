@@ -3,6 +3,19 @@
 
 const conditionalAdding = function(values, condition) {
     // Your code here
+    let sum = 0;
+    if (values.length === 0) {
+      return "improper input";
+    } else {
+      for (i = 0; i < values.length; i++) {
+        if (condition === "even" && values[i] % 2 === 0) {
+          sum += values[i];
+        } else if (condition === "odd" && values[i] % 2 !== 0) {
+          sum += values[i];
+        }
+      }
+      return sum;
+    }
   };
   
   console.log(conditionalAdding([1, 2, 3, 4, 5], "even"));
